@@ -1,0 +1,64 @@
+﻿@using EntityCodeFirstProject.Entities
+@model User
+@{
+    ViewBag.Title = "KayitEkle";
+}
+
+<h2>KayitEkle</h2>
+
+@using (Html.BeginForm("KayitEkle","Form",FormMethod.Post))
+{
+
+
+    <div class="mb-3">
+        <div class="form-horizontal">
+
+            <label for="exampleInputEmail1" class="control-label col-md-3">First Name</label>
+            @*<div class="col-md-9"> @Html.TextBox("FirstName", null, new { @class = "form-control" })</div>*@
+            <div class="col-md-9">
+                @Html.TextBoxFor(model => model.FirstName, new { @class = "form-control" })
+            </div>
+
+
+
+            @*<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>*@
+
+            <label for="exampleInputEmail1" class="control-label col-md-3">Enter Your Surname</label>
+            @*<div class="col-md-9">
+            @Html.TextBox("Surname", null, new { @class = "form-control" })
+        </div>*@
+
+            <div class="col-md-9">
+                @Html.TextBoxFor(model => model.Surname, new { @class = "form-control" })
+            </div>
+
+
+            <label for="exampleInputEmail1" class="control-label col-md-3">Enter Your Username</label>
+            @*<div class="col-md-9"> @Html.TextBox("UserName", null, new { @class = "form-control" })</div>*@
+
+            <div class="col-md-9"> @Html.TextBoxFor(model => model.UserName, new { @class = "form-control" })</div>
+
+
+
+
+            <label for="exampleInputEmail1" class="control-label col-md-3">Enter Your Pasword</label>
+            @*<div class="col-md-9"> @Html.TextBox("Pasword", null, new { @class = "form-control" })</div>*@
+
+            <div class="col-md-9">@Html.TextBoxFor(model => model.Pasword, new { @class = "form-control" })</div>
+
+
+
+            <label for="exampleInputEmail1" class="control-label col-md-3">Enter Your Phone</label>
+            @*<div class="col-md-9">@Html.TextBox("Phone", null, new { @class = "form-control" })</div>*@
+
+            <div class="col-md-9">@Html.TextBoxFor(model => model.Phone, new { @class = "form-control" })</div>
+
+        </div>
+        <button type="submit" class="btn btn-primary">Kayit</button>
+
+    </div>
+
+
+}
+
